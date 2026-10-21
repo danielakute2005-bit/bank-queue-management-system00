@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Queue Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Bank Queue Management System</h1>
+      <p>FIFO (First-In, First-Out) Queue Demonstration</p>
+    </header>
+
+    <section class="card">
+      <h2>Add Customer</h2>
+      <div class="add-row">
+        <input id="customerName" type="text" placeholder="Enter customer name">
+        <button onclick="addCustomer()">Add to Queue</button>
+      </div>
+      <p id="message" class="message"></p>
+    </section>
+
+    <section class="card">
+      <div class="queue-header">
+        <h2>Current Queue</h2>
+        <span id="queueCount">0 customers</span>
+      </div>
+      <div id="queueList" class="queue-list">
+        <p class="empty">No customers are waiting.</p>
+      </div>
+      <div class="actions">
+        <button onclick="serveNext()">Serve Next Customer</button>
+        <button class="secondary" onclick="clearQueue()">Clear Queue</button>
+      </div>
+    </section>
+
+    <section class="card status">
+      <h2>Queue Status</h2>
+      <p><strong>Next to be served:</strong> <span id="nextCustomer">None</span></p>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
